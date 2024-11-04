@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>I Love you my sweet baby</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #fff7f8;
+}
+
+.wrapper {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
+  transition: all 1s ease;
+  color: #111;
+}
+
+label {
+  text-shadow: 8px 8px 30px rgba(0, 0, 0, 0.5);
+}
+label:hover {
+  color: #c32a2a;
+  cursor: pointer;
+}
+
+#titit1 + label,
+#titit2 + label {
+  border-radius: 50px;
+  top: 0;
+}
+
+#titit1:checked + label,
+#titit2:checked + label,
+#titit3:checked + label {
+  background: #c32a2a;
+  font-size: 0;
+  transition: all 1s ease;
+}
+
+#titit1:checked + label,
+#titit2:checked + label {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  line-height: 300px;
+}
+
+#titit1 + label {
+  left: 0;
+}
+
+#titit2 + label {
+  right: 0;
+}
+
+#titit3 + label {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#titit3:checked + label {
+  width: 275px;
+  height: 275px;
+  bottom: 96px;
+  left: 162px;
+  transform: rotate(45deg);
+  line-height: 27px;
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #999;
+}
+
+/* Flower decorations */
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: pink;
+  border-radius: 50%;
+  box-shadow: inset 0px -10px 0px 0px rgba(255, 182, 193, 0.8);
+  opacity: 0.9;
+}
+
+.flower::before,
+.flower::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: pink;
+  border-radius: 50%;
+  box-shadow: inset 0px -10px 0px 0px rgba(255, 182, 193, 0.8);
+}
+
+.flower::before {
+  transform: rotate(45deg);
+}
+
+.flower::after {
+  transform: rotate(-45deg);
+}
+
+/* Flower positions */
+.flower1 { top: 10px; left: 60px; }
+.flower2 { top: 10px; right: 60px; }
+.flower3 { bottom: 60px; left: 60px; }
+.flower4 { bottom: 60px; right: 60px; }
+
+/* Sweet message style */
+.message {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #c32a2a;
+  text-align: center;
+  line-height: 1.5;
+}
+</style>
+<body>
+  <div class="wrapper">
+    <!-- Cute flower decorations -->
+    <div class="flower flower1"></div>
+    <div class="flower flower2"></div>
+    <div class="flower flower3"></div>
+    <div class="flower flower4"></div>
+
+    <!-- Interactive words -->
+    <input type="checkbox" id="titit1"/>
+    <label for="titit1">I</label>
+    <input type="checkbox" id="titit2"/>
+    <label for="titit2">love</label>
+    <input type="checkbox" id="titit3"/>
+    <label for="titit3">you</label>
+
+    <!-- Sweet message for your wife -->
+    <div class="message">
+      For the sweetest and most beautiful girl in the world,<br>
+      my amazing wife Kayla.<br>
+      Every day with you is a dream come true. ❤️
+    </div>
+  </div>
+  <span>(Click on words)</span>
+</body>
+</html>
